@@ -37,7 +37,6 @@ LanguageSelectionWidget::LanguageSelectionWidget(QWidget *parent)
     if (baseLocale.contains('_')) {
         lastLocale = baseLocale.split('_').at(1);
     }
-    qDebug() << "LAST" << lastLocale;
 	int lastLocaleIndex = 0;
 	const auto english = new QListWidgetItem(tr("English"));
 	english->setData(Qt::UserRole, "en");
@@ -105,32 +104,20 @@ void LanguageSelectionWidget::keyPressEvent(QKeyEvent *event)
 
 void LanguageSelectionWidget::loadLocales()
 {
-
     const QDir translationsDirectory(trikKernel::Paths::translationsPath());
     QDirIterator files(translationsDirectory.absolutePath(), QDir::Files);
     while (files.hasNext()) {
         const QFileInfo localeInfo(files.next());
         if (localeInfo.exists()) {
             QString baseName = localeInfo.baseName();
-            qDebug() << "baseName: [" << baseName << "]";
             if (!baseName.isEmpty() && baseName.contains('_')) {
-                // Разделяем имя файла по символу подчеркивания
                 QStringList parts = baseName.split('_');
                 QString langCode = parts.at(1);
                 QLocale locale(langCode);
                 QString languageName = QLocale::languageToString(locale.language());
-    //			QSettings parsedLocaleInfo(localeInfo.absoluteFilePath(), QSettings::IniFormat);
-    //			parsedLocaleInfo.setIniCodec("UTF-8");
-    //			parsedLocaleInfo.sync();
-    //			const QString localeName = parsedLocaleInfo.value("name", "").toString();
                 if (languageName != "") {
                     mAvailableLocales.insert(langCode, languageName);
                 }
-                qDebug() << "KEY: " << langCode << " VALUE: " << languageName;
-            }
-            else
-            {
-                continue;
             }
         }
     }

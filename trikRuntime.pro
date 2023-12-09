@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-TARGET=trikRuntime
+TARGET = trikRuntime
 TEMPLATE = subdirs
 SUBDIRS = \
         initvars \
@@ -59,25 +59,16 @@ trikGui.depends = trikCommunicator trikScriptRunner trikWiFi trikTelemetry
     PythonQt.depends = qslog
 }
 
-#TRANSLATIONS_DIR=$$system_quote($$PWD/translations)
-#LRELEASE_DIR = $$OUT_PWD/bin/x86-debug/translations
-#win32:TRANSLATIONS_DIR=$$system(cygpath -u $$TRANSLATIONS_DIR)
-
 TRANSLATIONS += \
         $$PWD/translations/trikRuntime_ru.ts \
         $$PWD/translations/trikRuntime_fr.ts \
 
-#CONFIG += lrelease
-
 OTHER_FILES += \
 	$$PWD/resources/changelog.txt \
 	$$PWD/resources/lsan.supp \
-	$$PWD/docker/Dockerfile \
-
-message(AAA $$LRELEASE_DIR OUT $$OUT_PWD DEST $$DESTDIR TR_PATH $$PWD)
+        $$PWD/docker/Dockerfile \
 
 include($$PWD/global.pri)
-#include($$PWD/translations/translations.pro)
 
 copyToDestdir($$PWD/resources/changelog.txt, now)
 copyToDestdir($$PWD/resources/lsan.supp, now)
