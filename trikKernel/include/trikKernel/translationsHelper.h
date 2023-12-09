@@ -27,7 +27,7 @@ public:
 	static void initLocale(bool localizationDisabled);
 
 private:
-	static void loadTranslators(const QString &locale);
+    static void loadTranslators(const QString &locale);
 };
 
 }

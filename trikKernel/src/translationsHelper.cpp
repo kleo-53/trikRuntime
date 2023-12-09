@@ -30,18 +30,18 @@ using namespace trikKernel;
 
 void TranslationsHelper::loadTranslators(const QString &locale)
 {
-	const QDir translationsDirectory(Paths::translationsPath() + locale);
+    const QDir translationsDirectory(Paths::translationsPath());
 
-	QLOG_INFO() << "Loading translations from" << translationsDirectory.absolutePath();
-
-	QDirIterator directories(translationsDirectory, QDirIterator::Subdirectories);
-	while (directories.hasNext()) {
-		for (const QFileInfo &translatorFile : QDir(directories.next()).entryInfoList(QDir::Files)) {
-			QTranslator *translator = new QTranslator(qApp);
-			translator->load(translatorFile.absoluteFilePath());
-			QCoreApplication::installTranslator(translator);
-		}
-	}
+    QDirIterator files(translationsDirectory);
+    while (files.hasNext()) {
+        const QFileInfo &translatorFile = QFileInfo(files.next());
+        if (translatorFile.isFile() && translatorFile.baseName().split('_').at(1) == locale) {
+            QLOG_INFO() << "Loading translations from" << translatorFile.absolutePath();
+            QTranslator *translator = new QTranslator(qApp);
+            translator->load(translatorFile.absoluteFilePath());
+            QCoreApplication::installTranslator(translator);
+        }
+    }
 }
 
 void TranslationsHelper::initLocale(bool localizationDisabled)
@@ -70,5 +70,5 @@ void TranslationsHelper::initLocale(bool localizationDisabled)
 	}
 
 	QLocale::setDefault(QLocale(locale));
-	loadTranslators(locale);
+    loadTranslators(locale);
 }
