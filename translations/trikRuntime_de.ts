@@ -147,7 +147,7 @@
     <name>QsLogging::Window</name>
     <message>
         <source>&amp;Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pause</translation>
     </message>
     <message>
         <source>&amp;Resume</source>
@@ -308,7 +308,7 @@
     <name>trikGui::FileManagerWidget</name>
     <message>
         <source>Delete all...</source>
-        <translation type="unfinished"></translation>
+        <translation>alles löschen</translation>
     </message>
     <message>
         <source>File Manager</source>
@@ -410,7 +410,7 @@
     <name>trikGui::NetworkWidget</name>
     <message>
         <source>Hull number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rumpfnummer:</translation>
     </message>
     <message>
         <source>IP: </source>
