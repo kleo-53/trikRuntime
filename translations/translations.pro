@@ -14,12 +14,13 @@
 
 TEMPLATE = lib
 include(../global.pri)
-TRANSLATIONS_DIR=$$system_quote($$DESTDIR/translations/)
-LRELEASE_DIR = $$DESTDIR/translations
+TRANSLATIONS_DIR=$$DESTDIR/translations/
+LRELEASE_DIR=$$DESTDIR/translations/
 
 TRANSLATIONS += \
         $$PWD/trikRuntime_ru.ts \
         $$PWD/trikRuntime_fr.ts \
+        $$PWD/trikRuntime_de.ts \
 
 CONFIG += lrelease
 

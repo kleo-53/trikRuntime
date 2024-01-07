@@ -12,31 +12,31 @@
     <name>LogWindow</name>
     <message>
         <source>Log window</source>
-        <translation type="unfinished"></translation>
+        <translation>Окно журнала</translation>
     </message>
     <message>
         <source>&amp;Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Пауза</translation>
     </message>
     <message>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Сохранить</translation>
     </message>
     <message>
         <source>C&amp;lear</source>
-        <translation type="unfinished"></translation>
+        <translation>О&amp;чистить</translation>
     </message>
     <message>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Копировать</translation>
     </message>
     <message>
         <source>Level:</source>
-        <translation type="unfinished"></translation>
+        <translation>Уровень:</translation>
     </message>
     <message>
         <source>&amp;Auto scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Автопрокрутка</translation>
     </message>
 </context>
 <context>
@@ -63,7 +63,7 @@
     </message>
     <message>
         <source>Path to a directory where core dump will be saved in case of creation.</source>
-        <translation>Путь к папке, в которую будет сохранен core dump в случае создания. </translation>
+        <translation>Путь к папке, в которую будет сохранен core dump в случае создания.</translation>
     </message>
     <message>
         <source>Positional arguments:</source>
@@ -104,69 +104,69 @@
     </message>
     <message>
         <source>Disable display support. When this flag is active, trikRun can work without QWS or even physical display</source>
-        <translation type="unfinished">Отключает поддержку дисплея. С этим флагом trikRun может работать без ключа -qws и даже без физического дисплея</translation>
+        <translation>Отключает поддержку дисплея. С этим флагом trikRun может работать без ключа -qws и даже без физического дисплея</translation>
     </message>
     <message>
         <source>Runner of JavaScript and Python files.</source>
         <translation>Интерпретатор скриптов на JavaScript и Python для ТРИК.</translation>
     </message>
     <message>
-        <source>Trace</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Debug</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Info</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Warning</source>
-        <translation type="unfinished">Внимание</translation>
+        <translation>Внимание</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation type="unfinished">Ошибка</translation>
+        <translation>Ошибка</translation>
+    </message>
+    <message>
+        <source>Trace</source>
+        <translation>След</translation>
+    </message>
+    <message>
+        <source>Debug</source>
+        <translation>Отладка</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Инфо</translation>
     </message>
     <message>
         <source>Fatal</source>
-        <translation type="unfinished"></translation>
+        <translation>Фатально</translation>
     </message>
 </context>
 <context>
     <name>QsLogging::LogWindowModel</name>
     <message>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Время</translation>
     </message>
     <message>
         <source>Level</source>
-        <translation type="unfinished"></translation>
+        <translation>Уровень</translation>
     </message>
     <message>
         <source>Message</source>
-        <translation type="unfinished"></translation>
+        <translation>Сообщение</translation>
     </message>
 </context>
 <context>
     <name>QsLogging::Window</name>
     <message>
         <source>&amp;Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Пауза</translation>
     </message>
     <message>
         <source>&amp;Resume</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Возобновить</translation>
     </message>
     <message>
         <source>Save log</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить логи</translation>
     </message>
     <message>
         <source>Log file (*.log)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл логов (*.log)</translation>
     </message>
 </context>
 <context>
@@ -280,9 +280,7 @@
     </message>
     <message>
         <source>Choose motors power (%): </source>
-        <translation>Выберите мощность
- моторов
-(в процентах):</translation>
+        <translation>Выберите мощность моторов (в процентах): </translation>
     </message>
     <message>
         <source>Wait for Encoder</source>
@@ -456,7 +454,7 @@
     <name>trikGui::NetworkWidget</name>
     <message>
         <source>Hull number:</source>
-        <translation type="unfinished">Бортномер:</translation>
+        <translation>Бортномер:</translation>
     </message>
     <message>
         <source>IP: </source>
@@ -529,12 +527,14 @@
     <message>
         <source>Select distance:
 </source>
-        <translation>Выберите расстояние:</translation>
+        <translation>Выберите расстояние:
+</translation>
     </message>
     <message>
         <source>Select tacho limit:
 </source>
-        <translation>Выберите предел оборотов:</translation>
+        <translation>Выберите предел оборотов:
+</translation>
     </message>
 </context>
 <context>
@@ -763,7 +763,7 @@ Escape</translation>
     <name>trikScriptRunner::ScriptEngineWorker</name>
     <message>
         <source>Line %1: %2</source>
-        <translation type="unfinished">Строка %1: %2</translation>
+        <translation>Строка %1: %2</translation>
     </message>
     <message>
         <source>File %1 not found</source>
@@ -774,7 +774,7 @@ Escape</translation>
     <name>trikScriptRunner::ScriptThread</name>
     <message>
         <source>Line %1: %2</source>
-        <translation type="unfinished">Строка %1: %2</translation>
+        <translation>Строка %1: %2</translation>
     </message>
 </context>
 <context>

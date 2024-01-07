@@ -62,6 +62,7 @@ trikGui.depends = trikCommunicator trikScriptRunner trikWiFi trikTelemetry
 TRANSLATIONS += \
         $$PWD/translations/trikRuntime_ru.ts \
         $$PWD/translations/trikRuntime_fr.ts \
+        $$PWD/translations/trikRuntime_de.ts \
 
 OTHER_FILES += \
 	$$PWD/resources/changelog.txt \
